@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Thất Việt - Đồ Gỗ Nội Thất Cao Cấp</title>
+    <link rel="stylesheet" href="css/Trangchu.css">
+</head>
+<body>
+    <!-- Modal Đăng nhập / Đăng ký -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <button class="auth-modal-close" id="closeModal">×</button>
+            <!-- Đăng nhập -->
+            <div class="auth-form">
+                <h2 class="auth-title">ĐĂNG NHẬP</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Tên đăng nhập hoặc địa chỉ email <span>*</span></label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu <span>*</span></label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Lưu thông tin đăng nhập</label>
+                    </div>
+                    <button type="submit" class="btn-auth">ĐĂNG NHẬP</button>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                </form>
+            </div>
+            <!-- Đăng ký -->
+            <div class="auth-form">
+                <h2 class="auth-title">ĐĂNG KÝ</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Địa chỉ email <span>*</span></label>
+                        <input type="email" required>
+                    </div>
+                    <p class="register-desc">
+                        Mật khẩu mới sẽ được gửi tới email của bạn.<br><br>
+                        Dữ liệu cá nhân của bạn sẽ được sử dụng để hỗ trợ trải nghiệm của bạn trên toàn bộ trang web này, để quản lý quyền truy cập vào tài khoản của bạn và cho các mục đích khác được mô tả trong chính sách bảo mật của chúng tôi.
+                    </p>
+                    <button type="submit" class="btn-auth">ĐĂNG KÝ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="#">VN</a>
+                <a href="#">EN</a>
+                <a href="tel:0903884358">☎ 0367 115 xxx</a>
+                <a href="Pages/gioithieu.html">Giới thiệu</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#" style="color:#ffcc00;">Giảm giá đặc biệt</a>
+            </div>
+            <div class="top-bar-right">
+                <span class="icon">📍</span>
+                <span class="icon">♡</span>
+                <span class="icon">🛒</span>
+                <!-- PHẦN USER ĐẸP VÀ RÕ RÀNG -->
+                <div class="user-area">
+                    <span id="loginText" class="login-text">Đăng nhập</span>
+                    <div class="dropdown-menu">
+                        <a href="#" id="logoutBtn">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="Trangchu.html" class="logo">
+                        <img src="images/logo.jpg" alt="Nội Thất Việt" class="logo-img">
+                    </a>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                        <button onclick="searchProducts()">Tìm</button>
+                    </div>
+                    <div class="header-icons">
+                        <a href="/web-demo/Pages/giohang.html" class="icon-btn" style="text-decoration: none; color: inherit;">
+                            🛒 <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                        <button class="icon-btn" id="userBtn">👤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="Trangchu.html">Trang chủ</a></li>
+                    <li><a href="Pages/sanpham.html">Sản phẩm</a></li>
+                    <li><a href="#">Phòng</a></li>
+                    <li><a href="Pages/bosuutap.html">Bộ sưu tập</a></li>
+                    <li><a href="Pages/thietke.html">Thiết kế nội thất</a></li>
+                    <li><a href="#">Góc cảm hứng</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MỖI BÌNH HOA LÀ MỘT KHOẢNH KHẮC TUYỆT VỜI</h1>
+            <button class="hero-btn" onclick="window.location.href='Pages/sanpham.html'">XEM THÊM</button>
+        </div>
+    </section>
+    <!-- 3 ảnh lớn -->
+    <section class="featured-categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-item">
+                    <img src="images/sofatc.jpg" alt="Sofa">
+                    <div class="category-label">Sofa</div>
+                </div>
+                <div class="category-item">
+                    <img src="images/GIUONGtc.jpg" alt="Giường">
+                    <div class="category-label">Giường</div>
+                </div>
+                <div class="category-item">
+                    <img src="images/banan.jpg" alt="Bàn ăn">
+                    <div class="category-label">Bàn ăn</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SẢN PHẨM MỚI -->
+    <section class="new-products">
+        <div class="section-header">
+            <h2 class="section-title">SẢN PHẨM MỚI</h2>
+            <a href="Pages/sanpham.html" class="see-all">xem tất cả ></a>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="scrollCarousel(-1)">‹</button>
+            <div class="carousel-track" id="carouselTrack">
+                <div class="product-card">
+                    <img src="images/hoatinhdautc.jpg">
+                    <div class="product-info">
+                        <div class="product-name">Hoa Tinh Dầu Oriental Hydrangeas – Ivory</div>
+                        <div class="product-price">11,900,000 VND</div>
+                        <div class="product-actions">
+                            <button class="heart-btn" onclick="toggleHeart(this, event)">♡</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/sanphammoitc.jpg">
+                    <div class="product-info">
+                        <div class="product-name">Hoa Tinh Dầu Grand Chinoiserie Hydrangeas – Blue</div>
+                        <div class="product-price">17,900,000 VND</div>
+                        <div class="product-actions">
+                            <button class="heart-btn" onclick="toggleHeart(this, event)">♡</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/sanphammoi2tc.jpg">
+                    <div class="product-info">
+                        <div class="product-name">Hoa Tinh Dầu Grand Chinoiserie Hydrangeas – Ivory</div>
+                        <div class="product-price">17,900,000 VND</div>
+                        <div class="product-actions">
+                            <button class="heart-btn" onclick="toggleHeart(this, event)">♡</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/sanphammoi3tc.jpg">
+                    <div class="product-info">
+                        <div class="product-name">Khăn Trải Bàn Tintoretto Beige</div>
+                        <div class="product-price">6,900,000 VND</div>
+                        <div class="product-actions">
+                            <button class="heart-btn" onclick="toggleHeart(this, event)">♡</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="scrollCarousel(1)">›</button>
+        </div>
+    </section>
+    <!-- Thiết kế nội thất -->
+    <section class="design-section">
+        <div class="design-container">
+            <div class="design-content">
+                <h2 class="design-title">Thiết kế nội thất</h2>
+                <p class="design-desc">
+                    Với kinh nghiệm hơn 26 năm trong thiết kế và hoàn thiện nội thất cùng đội ngũ thiết kế chuyên nghiệp,
+                    Nội Thất Việt mang đến giải pháp toàn diện trong nội thất.
+                </p>
+                <a href="Pages/thietke.html" class="design-button">Xem thêm</a>
+            </div>
+            <div class="design-image-wrapper">
+                <img src="images/noithattc.jpg" alt="Thiết kế nội thất" class="design-image">
+            </div>
+        </div>
+    </section>
+    <!-- Xem, chạm và cảm nhận -->
+    <section class="experience-section">
+        <div class="experience-content">
+            <h2 class="experience-title">Xem, chạm và cảm nhận</h2>
+            <p class="experience-desc">Trải nghiệm thực tế tại cửa hàng Nội Thất Việt</p>
+            <a href="#" class="hero-btn">TÌM CỬA HÀNG ></a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">Nội Thất Việt</div>
+                <p>KẾT NỐI VỚI Nội Thất Việt</p>
+                <p>FOLLOW US</p>
+                <p>Instagram — Youtube — Facebook</p>
+            </div>
+            <div class="footer-column">
+                <h3>NỘI THẤT VIỆT</h3>
+                <ul>
+                    <li><a href="Pages/gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Tổng công ty</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Thẻ hội viên</a></li>
+                    <li><a href="#">Đổi trả hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CẢM HỨNG #NOITHATVIET</h3>
+                <ul>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Ý tưởng và cảm hứng</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>NEWSLETTER</h3>
+                <p>Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Nội Thất Việt</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn">
+                    <button>ĐĂNG KÝ</button>
+                </div>
+                <p style="margin-top: 20px;">Email: noithatviet@company.com.vn</p>
+                <p>Hotline: 0367115xxx</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2025 - Bản quyền của xxx - thương hiệu thuộc xxx<br>
+                Từ năm xxx - thương hiệu đăng ký số xxxxxx Cục sở hữu trí tuệ
+            </p>
+        </div>
+    </footer>
+    <script src="js/Trangchu.js"></script>
+</body>
+</html>
